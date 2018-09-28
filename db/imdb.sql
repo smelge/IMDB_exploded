@@ -11,7 +11,8 @@ CREATE TABLE actors (
 CREATE TABLE movies (
   id SERIAL8 PRIMARY KEY,
   title VARCHAR(255),
-  genre VARCHAR(255)
+  genre VARCHAR(255),
+  budget INT
 );
 
 CREATE TABLE roles (

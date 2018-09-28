@@ -28,4 +28,26 @@ class Role
     sql = 'DELETE FROM roles'
     SqlRunner.run(sql)
   end
+
+  def self.all()
+    sql = '
+      SELECT * FROM roles
+    '
+
+    SqlRunner.run(sql).map do |role|
+      Role.new(role)
+    end
+  end
+
+  def update()
+    sql = '
+      UPDATE roles
+      SET
+      movie_id = $1,
+      actor_id = $2,
+      fee = $3
+      WHERE id = $4
+    ;'
+    SqlRunner.run(sql,[@movie_id,@actor_id,@fee,@id])
+  end
 end

@@ -21,11 +21,11 @@ actor4.save()
 actor5.save()
 
 # Create Movies
-movie1 = Movie.new({'title' => 'Final Biscuit','genre'=>'horror'})
-movie2 = Movie.new({'title' => 'The Lost Shovel','genre'=>'fantasy'})
-movie3 = Movie.new({'title' => 'Total Recoil','genre'=>'action'})
-movie4 = Movie.new({'title' => 'Bloodgore Splatter','genre'=>'family comedy'})
-movie5 = Movie.new({'title' => 'Debbie Does Chitty Chitty Bang Bang','genre'=>'documentary'})
+movie1 = Movie.new({'title' => 'Final Biscuit','genre'=>'horror','budget'=>54})
+movie2 = Movie.new({'title' => 'The Lost Shovel','genre'=>'fantasy','budget'=>90})
+movie3 = Movie.new({'title' => 'Total Recoil','genre'=>'action','budget'=>76})
+movie4 = Movie.new({'title' => 'Bloodgore Splatter','genre'=>'family comedy','budget'=>678})
+movie5 = Movie.new({'title' => 'Debbie Does Chitty Chitty Bang Bang','genre'=>'documentary','budget'=>23})
 
 movie1.save()
 movie2.save()
@@ -43,3 +43,7 @@ role1.save()
 role2.save()
 role3.save()
 role4.save()
+
+# movie2.budget()
+binding.pry
+nil
